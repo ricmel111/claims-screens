@@ -6,15 +6,18 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
    </head>
    <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-         <div class="container">
-            <a class="navbar-brand" href="#">Mellon Insurance</a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+         <div class="container-sm">
+            <a class="navbar-brand" href="#">Project Speed</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Make a Claim</a></li>
+                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">New Claim</a></li>
                   <li class="nav-item"><a class="nav-link" href="search.html">Search</a></li>
                   <li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
                   <li class="nav-item"><a class="nav-link" href="#">Link 3</a></li>
@@ -23,74 +26,72 @@
             </div>
          </div>
       </nav>
-      <div class="container">
-         <!-- Main Content -->
+      <div class="container p-5"> <!-- Main Content -->
          <div class="row">
-            <div class="text-center mt-5">
-               <h1>Make A Claim</h1>
-               <p class="lead">Fill in the form below to start making your claim</p>
+            <div class="text-center mt-5 text-white">
+               <h1><strong>New Claim</strong></h1>
+               <p class="lead">Fill in the form below to start making a claim</p>
             </div>
          </div>
          <div class="row mt-5">
-            <div class="col-lg-6 offset-lg-3 card"  id="claimForm">
+            <div class="col-12 col-lg-8 offset-lg-2 card"  id="claimForm">
                <div class="card-body">
                   <form>
                      <div class="form-group row">
                         <label for="claimPolicyNumber" class="col-sm-5 col-form-label">Policy Number</label>
                         <div class="col-sm-7">
-                           <input type="text" class="form-control" id="claimPolicyNumber" placeholder="Policy Number">
+                           <input type="text" class="form-control" id="claimPolicyNumber" placeholder="Policy Number" required>
                         </div>
                      </div>
                      <div class="form-group row">
                         <label for="claimInsuranceType" class="col-sm-5 col-form-label">Insurance Type</label>
                         <div class="col-sm-7">
-                           <select id="claimInsuranceType" class="form-select">
-                              <option selected>Choose...</option>
-                              <option>Property</option>
-                              <option>Motor</option>
-                              <option>Pet</option>
+                           <select id="claimInsuranceType" class="form-select" required>
+                              <option value="">Select...</option>
+                              <option value="Property">Property</option>
+                              <option value="Motor">Motor</option>
+                              <option value="Pet">Pet</option>
                            </select>
                         </div>
                      </div>
                      <div class="form-group row">
                         <label for="claimFullName" class="col-sm-5 col-form-label">Full Name</label>
                         <div class="col-sm-7">
-                           <input type="text" class="form-control" id="claimFullName" placeholder="Full Name">
+                           <input type="text" class="form-control" id="claimFullName" placeholder="Full Name" required>
                         </div>
                      </div>
                      <div class="form-group row">
                         <label for="claimStartDate" class="col-sm-5 col-form-label">Claim Start Date</label>
                         <div class="col-sm-7">
-                           <input type="date" class="form-control" id="claimStartDate">
+                           <input type="date" class="form-control" id="claimStartDate" required>
                         </div>
                      </div>
                      <div class="form-group row">
                         <label for="claimEstimatedAmount" class="col-sm-5 col-form-label">Estimated Claim Amount</label>
                         <div class="col-sm-7">
                           <span id="dollar">
-                           <input type="number" class="form-control" id="claimEstimatedAmount" placeholder=""></span>
+                           <input type="number" class="form-control" id="claimEstimatedAmount" required></span>
                         </div>
                      </div>
                      <div class="form-group row">
                         <label for="claimReason" class="col-sm-5 col-form-label">Reason for the claim</label>
                         <div class="col-sm-7">
-                           <input type="text" class="form-control" id="claimReason" placeholder="Reason for the claim">
+                           <input type="text" class="form-control" id="claimReason" placeholder="Reason for the claim" required>
                         </div>
                      </div>
                      <div class="form-group row">
-                        <label for="claimIncidentDescription" class="col-sm-5 col-form-label">Description of Incident</label>
-                        <div class="col-sm-7">
-                           <textarea cols="40" rows="5" class="form-control" id="claimIncidentDescription" placeholder="Description of Incident"></textarea>
+                        <label for="claimIncidentDescription" class="col-5 col-form-label">Description of Incident</label>
+                        <div class="col-7">
+                           <textarea cols="40" rows="5" class="form-control" id="claimIncidentDescription" placeholder="Description of Incident" required></textarea>
                         </div>
                      </div>
-                     <div class="row justify-content-center mt-4">
-                        <button type="submit" class="btn btn-primary">Submit Claim</button>
+                     <div class="row mt-4">
+                        <button type="submit" class="btn btn-primary col-7 offset-5">Submit Claim</button>
                      </div>
                   </form>
                </div>
             </div>
          </div>
-      </div>
-      <!-- Main Content -->
+      </div><!-- Main Content -->
    </body>
 </html>
